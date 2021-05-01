@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Nothing
 {
@@ -15,90 +16,50 @@ namespace Nothing
         int clicks = 0;
 
         //start date
-        string sh;
-        string sm;
-        string ss;
-
-        int ish;
-        int ism;
-        int iss;
+        private DateTime starttime;
+        private string s_starttime;
 
         //1st click
-        string ph;
-        string pm;
-        string ps;
-
-        int iph;
-        int ipm;
-        int ips;
+        private DateTime firstclick;
+        private string s_firstclick;
 
         //10th click
-        string p1h;
-        string p1m;
-        string p1s;
-
-        int ip1h;
-        int ip1m;
-        int ip1s;
-
-        int if1h;
-        int if1m;
-        int if1s;
-
-        int ip1;
+        private DateTime tenthclick;
+        private string s_tenthclick;
+        private TimeSpan tenthdiff;
+        private string s_tenthdiff;
 
         //100th click
-        string p2h;
-        string p2m;
-        string p2s;
-
-        int ip2h;
-        int ip2m;
-        int ip2s;
-
-        int if2h;
-        int if2m;
-        int if2s;
+        private DateTime hundthclick;
+        private string s_hundthclick;
+        private TimeSpan hundthdiff;
+        private string s_hundthdiff;
 
         //200th click
-        string p3h;
-        string p3m;
-        string p3s;
-
-        int ip3h;
-        int ip3m;
-        int ip3s;
-
-        int if3h;
-        int if3m;
-        int if3s;
+        private DateTime tuhundthclick;
+        private string s_tuhundthclick;
+        private TimeSpan tuhundthdiff;
+        private string s_tuhundthdiff;
 
         //300th click
-        string p4h;
-        string p4m;
-        string p4s;
+        private DateTime trhundthclick;
+        private string s_trhundthclick;
+        private TimeSpan trhundthdiff;
+        private string s_trhundthdiff;
 
-        int ip4h;
-        int ip4m;
-        int ip4s;
-
-        int if4h;
-        int if4m;
-        int if4s;
+        //full time
+        private TimeSpan finaldiff;
+        private string s_finaldiff;
 
         public Form1()
         {
             InitializeComponent();
             label2.Text = clicks.ToString()+ "x";
-            sh = DateTime.Now.ToString("HH");
-            sm = DateTime.Now.ToString("mm");
-            ss = DateTime.Now.ToString("ss");
 
-            ish = Convert.ToInt32(sh);
-            ism = Convert.ToInt32(sm);
-            iss = Convert.ToInt32(ss);
+            starttime = DateTime.Now;
+            s_starttime = starttime.ToString("HH:mm:ss");
 
-            label4.Text = ish.ToString() + ":" + ism.ToString() + "." + iss.ToString();
+            label4.Text = s_starttime;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -123,112 +84,57 @@ namespace Nothing
 
         private void timeclicks()//11,12,13,14,15
         {
-            if(clicks == 1)
-            {
-                ph = DateTime.Now.ToString("HH");
-                pm = DateTime.Now.ToString("mm");
-                ps = DateTime.Now.ToString("ss");
+            if(clicks == 1){
+                firstclick = DateTime.Now;
+                s_firstclick = firstclick.ToString("HH:mm:ss");
 
-                iph = Convert.ToInt32(ph);
-                ipm = Convert.ToInt32(pm);
-                ips = Convert.ToInt32(ps);
-                Console.WriteLine(iph + ":" + ipm + ":" + ips);
 
-                label11.Text = iph.ToString() + ":" + ipm.ToString() + "." + ips.ToString();
+                label11.Text = $"{s_firstclick}";
             }
             else if(clicks == 10)
             {
-                p1h = DateTime.Now.ToString("HH");
-                p1m = DateTime.Now.ToString("mm");
-                p1s = DateTime.Now.ToString("ss");
+                tenthclick = DateTime.Now;
+                s_tenthclick = tenthclick.ToString("HH:mm:ss");
 
-                ip1h = Convert.ToInt32(p1h);
-                ip1m = Convert.ToInt32(p1m);
-                ip1s = Convert.ToInt32(p1s);
-                Console.WriteLine(ip1h + ":" + ip1m + ":" + ip1s);
+                tenthdiff = tenthclick - firstclick;
+                s_tenthdiff = tenthdiff.ToString(@"hh\:mm\:ss\.ff");
 
-                if (ipm == ip1m)
-                {
-                    if1s = ip1s - ips;
-                }
-                else
-                {
-                    ip1 = ip1m - ipm;
-                    if1s = ((ip1 * 60) - ips ) + ip1s;
-                }
-                
-
-                label12.Text = ip1h.ToString() + ":" + ip1m.ToString() + "." + ip1s.ToString() + "(" + if1h.ToString() + ":" + if1m.ToString() + "." + if1s.ToString() + "s)";
+                label12.Text = $"{s_tenthclick} ({s_tenthdiff})";
             }
             else if (clicks == 100)
             {
-                p2h = DateTime.Now.ToString("HH");
-                p2m = DateTime.Now.ToString("mm");
-                p2s = DateTime.Now.ToString("ss");
+                hundthclick = DateTime.Now;
+                s_hundthclick = hundthclick.ToString("HH:mm:ss");
 
-                ip2h = Convert.ToInt32(p2h);
-                ip2m = Convert.ToInt32(p2m);
-                ip2s = Convert.ToInt32(p2s);
+                hundthdiff = hundthclick - tenthclick;
+                s_hundthdiff = hundthdiff.ToString(@"hh\:mm\:ss\.ff");
 
-                if (ip1m == ip2m)
-                {
-                    if2s = ip2s - ip1s;
-                }
-                else
-                {
-                    int ip2 = ip2m - ip1m;
-                    if2s = ((ip2 * 60) - ip1s) + ip2s;
-                }
-
-                label13.Text = ip2h.ToString() + ":" + ip2m.ToString() + "." + ip2s.ToString() + "(" + if2h.ToString() + ":" + if2m.ToString() + "." + if2s.ToString() + "s)";
+                label13.Text = $"{s_hundthclick} ({s_hundthdiff})";
             }
             else if (clicks == 200)
             {
-                p3h = DateTime.Now.ToString("HH");
-                p3m = DateTime.Now.ToString("mm");
-                p3s = DateTime.Now.ToString("ss");
+                tuhundthclick = DateTime.Now;
+                s_tuhundthclick = tuhundthclick.ToString("HH:mm:ss");
 
-                ip3h = Convert.ToInt32(p3h);
-                ip3m = Convert.ToInt32(p3m);
-                ip3s = Convert.ToInt32(p3s);
+                tuhundthdiff = tuhundthclick - hundthclick;
+                s_tuhundthdiff = tuhundthdiff.ToString(@"hh\:mm\:ss\.ff");
 
-                if (ip2m == ip3m)
-                {
-                    if3s = ip3s - ip2s;
-                }
-                else
-                {
-                    int ip3 = ip3m - ip2m;
-                    if3s = ((ip3 * 60) - ip2s) + ip3s;
-                }
-
-                label14.Text = ip3h.ToString() + ":" + ip3m.ToString() + "." + ip3s.ToString() + "(" + if3h.ToString() + ":" + if3m.ToString() + "." + if3s.ToString() + "s)";
+                label14.Text = $"{s_tuhundthclick} ({s_tuhundthdiff})";
             }
             else if (clicks == 300)
             {
-                p4h = DateTime.Now.ToString("HH");
-                p4m = DateTime.Now.ToString("mm");
-                p4s = DateTime.Now.ToString("ss");
+                trhundthclick = DateTime.Now;
+                s_trhundthclick = trhundthclick.ToString("HH:mm:ss");
 
-                ip4h = Convert.ToInt32(p4h);
-                ip4m = Convert.ToInt32(p4m);
-                ip4s = Convert.ToInt32(p4s);
+                trhundthdiff = trhundthclick - tuhundthclick;
+                s_trhundthdiff = trhundthdiff.ToString(@"hh\:mm\:ss\.ff");
 
-                if (ip3m == ip4m)
-                {
-                    if4s = ip4s - ip3s;
-                }
-                else
-                {
-                    int ip4 = ip4m - ip3m;
-                    if4s = ((ip4 * 60) - ip3s) + ip4s;
-                }
+                label15.Text = $"{s_trhundthclick} ({s_trhundthdiff})";
 
-                label15.Text = ip4h.ToString() + ":" + ip4m.ToString() + "." + ip4s.ToString() + "(" + if4h.ToString() + ":" + if4m.ToString() + "." + if4s.ToString() + "s)";
-            }
-            else
-            {
-                Console.WriteLine("fuck this");
+                finaldiff = trhundthclick - starttime;
+                s_finaldiff = finaldiff.ToString(@"hh\:mm\:ss\.ff");
+
+                label16.Text = $"({s_finaldiff})";
             }
         }
 
