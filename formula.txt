@@ -1,0 +1,2 @@
+sm == fm = první formula  s - s
+sm != fm = druhá formula (60 - m) + s
