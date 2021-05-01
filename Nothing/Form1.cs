@@ -90,7 +90,7 @@ namespace Nothing
         {
             InitializeComponent();
             label2.Text = clicks.ToString()+ "x";
-            sh = DateTime.Now.ToString("hh");
+            sh = DateTime.Now.ToString("HH");
             sm = DateTime.Now.ToString("mm");
             ss = DateTime.Now.ToString("ss");
 
@@ -125,35 +125,36 @@ namespace Nothing
         {
             if(clicks == 1)
             {
-                ph = DateTime.Now.ToString("hh");
+                ph = DateTime.Now.ToString("HH");
                 pm = DateTime.Now.ToString("mm");
                 ps = DateTime.Now.ToString("ss");
 
                 iph = Convert.ToInt32(ph);
                 ipm = Convert.ToInt32(pm);
                 ips = Convert.ToInt32(ps);
-
+                Console.WriteLine(iph + ":" + ipm + ":" + ips);
 
                 label11.Text = iph.ToString() + ":" + ipm.ToString() + "." + ips.ToString();
             }
             else if(clicks == 10)
             {
-                p1h = DateTime.Now.ToString("hh");
+                p1h = DateTime.Now.ToString("HH");
                 p1m = DateTime.Now.ToString("mm");
                 p1s = DateTime.Now.ToString("ss");
 
                 ip1h = Convert.ToInt32(p1h);
                 ip1m = Convert.ToInt32(p1m);
                 ip1s = Convert.ToInt32(p1s);
+                Console.WriteLine(ip1h + ":" + ip1m + ":" + ip1s);
 
-                if(if1m == ip1m)
+                if (ipm == ip1m)
                 {
                     if1s = ip1s - ips;
                 }
                 else
                 {
                     ip1 = ip1m - ipm;
-                    if1s = ((ip1 * 60) - ip1m ) + ip1s;
+                    if1s = ((ip1 * 60) - ips ) + ip1s;
                 }
                 
 
@@ -161,7 +162,7 @@ namespace Nothing
             }
             else if (clicks == 100)
             {
-                p2h = DateTime.Now.ToString("hh");
+                p2h = DateTime.Now.ToString("HH");
                 p2m = DateTime.Now.ToString("mm");
                 p2s = DateTime.Now.ToString("ss");
 
@@ -169,14 +170,21 @@ namespace Nothing
                 ip2m = Convert.ToInt32(p2m);
                 ip2s = Convert.ToInt32(p2s);
 
-                if2m = ip2m - ipm;
-                if2s = ip2s - ips;
+                if (ip1m == ip2m)
+                {
+                    if2s = ip2s - ip1s;
+                }
+                else
+                {
+                    int ip2 = ip2m - ip1m;
+                    if2s = ((ip2 * 60) - ip1s) + ip2s;
+                }
 
                 label13.Text = ip2h.ToString() + ":" + ip2m.ToString() + "." + ip2s.ToString() + "(" + if2h.ToString() + ":" + if2m.ToString() + "." + if2s.ToString() + "s)";
             }
             else if (clicks == 200)
             {
-                p3h = DateTime.Now.ToString("hh");
+                p3h = DateTime.Now.ToString("HH");
                 p3m = DateTime.Now.ToString("mm");
                 p3s = DateTime.Now.ToString("ss");
 
@@ -184,14 +192,21 @@ namespace Nothing
                 ip3m = Convert.ToInt32(p3m);
                 ip3s = Convert.ToInt32(p3s);
 
-                if3m = ip3m - ipm;
-                if3s = ip3s - ips;
+                if (ip2m == ip3m)
+                {
+                    if3s = ip3s - ip2s;
+                }
+                else
+                {
+                    int ip3 = ip3m - ip2m;
+                    if3s = ((ip3 * 60) - ip2s) + ip3s;
+                }
 
                 label14.Text = ip3h.ToString() + ":" + ip3m.ToString() + "." + ip3s.ToString() + "(" + if3h.ToString() + ":" + if3m.ToString() + "." + if3s.ToString() + "s)";
             }
             else if (clicks == 300)
             {
-                p4h = DateTime.Now.ToString("hh");
+                p4h = DateTime.Now.ToString("HH");
                 p4m = DateTime.Now.ToString("mm");
                 p4s = DateTime.Now.ToString("ss");
 
@@ -199,8 +214,15 @@ namespace Nothing
                 ip4m = Convert.ToInt32(p4m);
                 ip4s = Convert.ToInt32(p4s);
 
-                if4m = ip4m - ipm;
-                if4s = ip4s - ips;
+                if (ip3m == ip4m)
+                {
+                    if4s = ip4s - ip3s;
+                }
+                else
+                {
+                    int ip4 = ip4m - ip3m;
+                    if4s = ((ip4 * 60) - ip3s) + ip4s;
+                }
 
                 label15.Text = ip4h.ToString() + ":" + ip4m.ToString() + "." + ip4s.ToString() + "(" + if4h.ToString() + ":" + if4m.ToString() + "." + if4s.ToString() + "s)";
             }
