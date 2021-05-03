@@ -103,7 +103,7 @@ namespace Nothing
 
                 label15.Text = $"{s_trhundthclick} ({s_trhundthdiff})";
 
-                finaldiff = trhundthclick - starttime;
+                finaldiff = trhundthclick - firstclick;
                 s_finaldiff = finaldiff.ToString(@"hh\:mm\:ss\.ff");
 
                 label16.Text = $"({s_finaldiff})";
