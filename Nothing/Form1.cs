@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Diagnostics;
 
 namespace Nothing
 {
     public partial class Form1 : Form
     {
-        int clicks = 0;
+        private int clicks = 0;
 
         //start date
         private DateTime starttime;
@@ -51,7 +43,7 @@ namespace Nothing
         private TimeSpan finaldiff;
         private string s_finaldiff;
 
-        public Form1()
+        public Form1() // initialize
         {
             InitializeComponent();
             label2.Text = clicks.ToString()+ "x";
@@ -62,27 +54,7 @@ namespace Nothing
             label4.Text = s_starttime;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timeclicks()//11,12,13,14,15
+        private void timeclicks() // called on every click of the Big Nothing button
         {
             if(clicks == 1){
                 firstclick = DateTime.Now;
@@ -93,15 +65,15 @@ namespace Nothing
             }
             else if(clicks == 10)
             {
-                tenthclick = DateTime.Now;
-                s_tenthclick = tenthclick.ToString("HH:mm:ss");
+                tenthclick = DateTime.Now; // gets curent time
+                s_tenthclick = tenthclick.ToString("HH:mm:ss"); // makes sring out of it
 
-                tenthdiff = tenthclick - firstclick;
-                s_tenthdiff = tenthdiff.ToString(@"hh\:mm\:ss\.ff");
+                tenthdiff = tenthclick - firstclick; // gets diference between 10th and 1st click time
+                s_tenthdiff = tenthdiff.ToString(@"hh\:mm\:ss\.ff"); // makes string out of it
 
-                label12.Text = $"{s_tenthclick} ({s_tenthdiff})";
+                label12.Text = $"{s_tenthclick} ({s_tenthdiff})"; // puts all the information the label
             }
-            else if (clicks == 100)
+            else if (clicks == 100) // repoetition
             {
                 hundthclick = DateTime.Now;
                 s_hundthclick = hundthclick.ToString("HH:mm:ss");
@@ -138,40 +110,29 @@ namespace Nothing
             }
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
-            clicks++;
-            label2.Text = clicks.ToString() + "x";
-            timeclicks();
+            clicks++; // counts clicks
+            label2.Text = clicks.ToString() + "x"; // updates couter label
+            timeclicks(); // calls the side time logic
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void clear() // restart
         {
-
-        }
-
-        //was suposed to be restart
-        private void clear()
-        {
-            label4.Text = DateTime.Now.ToString("hh:mm:ss");
+            label4.Text = DateTime.Now.ToString("HH:mm:ss");
 
             clicks = 0;
             label2.Text = clicks.ToString() + "x";
-            label11.Text = "nic";
-            label12.Text = "nic";
-            label13.Text = "nic";
-            label14.Text = "nic";
-            label15.Text = "nic";
+            label11.Text = "None";
+            label12.Text = "None";
+            label13.Text = "None";
+            label14.Text = "None";
+            label15.Text = "None";
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            clear();
         }
     }
 }

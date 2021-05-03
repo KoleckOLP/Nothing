@@ -23,7 +23,7 @@
         #region Kód generovaný Návrhářem Windows Form
 
         /// <summary>
-        /// Required method for Designer support - do not modify
+        /// Required method for Designer support - do not modify ;) I sure did not.
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent(){
@@ -45,6 +45,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -55,7 +56,6 @@
             this.label2.Size = new System.Drawing.Size(18, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "0x";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -65,7 +65,6 @@
             this.label3.Size = new System.Drawing.Size(144, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "You already pressed nothing:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -75,7 +74,6 @@
             this.label4.Size = new System.Drawing.Size(33, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "None";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -85,7 +83,6 @@
             this.label5.Size = new System.Drawing.Size(70, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "Launched at:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -140,7 +137,6 @@
             this.label11.Size = new System.Drawing.Size(33, 13);
             this.label11.TabIndex = 4;
             this.label11.Text = "None";
-            this.label11.Click += new System.EventHandler(this.label4_Click);
             // 
             // label12
             // 
@@ -150,7 +146,6 @@
             this.label12.Size = new System.Drawing.Size(33, 13);
             this.label12.TabIndex = 4;
             this.label12.Text = "None";
-            this.label12.Click += new System.EventHandler(this.label4_Click);
             // 
             // label13
             // 
@@ -160,7 +155,6 @@
             this.label13.Size = new System.Drawing.Size(33, 13);
             this.label13.TabIndex = 4;
             this.label13.Text = "None";
-            this.label13.Click += new System.EventHandler(this.label4_Click);
             // 
             // label14
             // 
@@ -170,7 +164,6 @@
             this.label14.Size = new System.Drawing.Size(33, 13);
             this.label14.TabIndex = 4;
             this.label14.Text = "None";
-            this.label14.Click += new System.EventHandler(this.label4_Click);
             // 
             // label15
             // 
@@ -180,7 +173,6 @@
             this.label15.Size = new System.Drawing.Size(33, 13);
             this.label15.TabIndex = 4;
             this.label15.Text = "None\r\n";
-            this.label15.Click += new System.EventHandler(this.label4_Click);
             // 
             // button1
             // 
@@ -211,11 +203,22 @@
             this.label16.TabIndex = 11;
             this.label16.Text = "None\r\n";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(4, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Reset";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 241);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.button1);
@@ -238,7 +241,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Nothing";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,6 +264,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button button2;
     }
 }
 
