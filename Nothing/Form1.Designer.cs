@@ -240,7 +240,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Nothing";
+            this.Text = "Nothing 1.1.1.0";
             this.ResumeLayout(false);
             this.PerformLayout();
 
