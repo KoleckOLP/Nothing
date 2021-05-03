@@ -16,7 +16,7 @@ All these commits are old and I am uploading this to tempt me to look at the cod
 ![TAS WR holder](leaderboard/TAS/TALoD_2.13.png)
 
 <pre>
-#1. The Absolute Lord of Darkness,     2.13  (using an autoclickers, version 1.1.1.0 unrelesed)
+#1. The Absolute Lord of Darkness,     2.13  (Using Autoclickers, version 1.1.1.0 unrelesed)
 #2. KoleckOLP,                         37.51 (AHK remap to keyboard, version 1.0.0.0)
 </pre>
 <h3>Normal</h3>
@@ -24,8 +24,8 @@ All these commits are old and I am uploading this to tempt me to look at the cod
 ![WR holder](leaderboard/normal/TALoD_29.25.png)
 
 <pre>
-#1. The Absolute Lord of Darkness,     29.25 (using an autoclickers, version 1.1.1.0 unrelesed)
-#2. KoleckOLP,                         38.99 (using an autoclickers, version 1.1.1.0 unrelesed)
+#1. The Absolute Lord of Darkness,     29.25 (mouse, version 1.1.1.0 unrelesed)
+#2. KoleckOLP,                         38.99 (mouse, version 1.1.1.0 unrelesed)
 </pre>
 
 You can submit your runs as issues, please include screenshots and method you used.
