@@ -28,4 +28,4 @@ All these commits are old and I am uploading this to tempt me to look at the cod
 #2. KoleckOLP,                         38.99 (mouse, version 1.1.1.0 unrelesed)
 </pre>
 
-You can submit your runs as issues, please include screenshots and method you used.
+You can submit your runs as issues, please include screenshot (of the whole window) and message with method you used(mouse, autoclicker, etc. ).
