@@ -17,16 +17,21 @@ All these commits are old and I am uploading this to tempt me to look at the cod
 
 <pre>
 #1. KoleckOLP                           0.34    (SafeMode AHK spacebar spammer, version 1.1.1.0)
-#2. The Absolute Lord of Darkness,      2.13    (using autoclickers, version 1.1.1.0 unrelesed)
+#2. The Absolute Lord of Darkness       2.13    (using autoclickers, version 1.1.1.0 unrelesed)
 </pre>
+
+[Current TAS screenshots](https://github.com/KoleckOLP/Nothing/tree/master/leaderboard/TAS)
+
 <h3>Normal</h3>
 
 ![WR holder](leaderboard/normal/TALoD_29.25.png)
 
 <pre>
-#1. The Absolute Lord of Darkness,     29.25 (mouse, version 1.1.1.0 unrelesed)
-#2. KoleckOLP,                         31.02 (2 finger touchpad, version 1.1.1.0)
+#1. The Absolute Lord of Darkness      29.25 (mouse, version 1.1.1.0 unrelesed)
+#2. KoleckOLP                          31.02 (2 finger touchpad, version 1.1.1.0)
 #3. kangalioo                          33.85 (1 finger spacebar, version 1.1.1.0)
 </pre>
+
+[Current Normal screenshots](https://github.com/KoleckOLP/Nothing/tree/master/leaderboard/normal)
 
 You can submit your runs as issues, please include screenshot (of the whole window) and message with method you used(mouse, autoclicker, etc. ).
