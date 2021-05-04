@@ -17,7 +17,7 @@ All these commits are old and I am uploading this to tempt me to look at the cod
 
 <pre>
 #1. KoleckOLP                           0.56    (custom AHK autoclicker script, version 1.1.1.0)
-#2. The Absolute Lord of Darkness,      2.13    (using an autoclickers, version 1.1.1.0 unrelesed)
+#2. The Absolute Lord of Darkness,      2.13    (using autoclickers, version 1.1.1.0 unrelesed)
 </pre>
 <h3>Normal</h3>
 
