@@ -13,11 +13,11 @@ All these commits are old and I am uploading this to tempt me to look at the cod
 <h2>let's also have a leaderboard:</h2>
 <h3>Tool Assisted</h3>
 
-![TAS WR holder](leaderboard/TAS/TALoD_2.13.png)
+![TAS WR holder](leaderboard/TAS/KoleckOLP_0.56.png)
 
 <pre>
-#1. The Absolute Lord of Darkness,     2.13  (Using Autoclickers, version 1.1.1.0 unrelesed)
-#2. KoleckOLP,                         37.51 (AHK remap to keyboard, version 1.0.0.0)
+#1. KoleckOLP                           0.56    (custom AHK autoclicker script, version 1.1.1.0)
+#2. The Absolute Lord of Darkness,      2.13    (using an autoclickers, version 1.1.1.0 unrelesed)
 </pre>
 <h3>Normal</h3>
 
