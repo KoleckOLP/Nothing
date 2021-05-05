@@ -10,22 +10,6 @@ than there is a commit [96fe087](https://github.com/KoleckOLP/Nothing/commit/96f
 
 All these commits are old and I am uploading this to tempt me to look at the code and make an actually working implementation.
 
-<h2>let's also have a leaderboard:</h2>
-<h3>Tool Assisted</h3>
+<h2>Who the fick cares about leaderboard if I can hack my time >:)</h2>
 
-![TAS WR holder](leaderboard/TAS/KoleckOLP_0.56.png)
-
-<pre>
-#1. KoleckOLP                           0.56    (custom AHK autoclicker script, version 1.1.1.0)
-#2. The Absolute Lord of Darkness,      2.13    (using autoclickers, version 1.1.1.0 unrelesed)
-</pre>
-<h3>Normal</h3>
-
-![WR holder](leaderboard/normal/TALoD_29.25.png)
-
-<pre>
-#1. The Absolute Lord of Darkness,     29.25 (mouse, version 1.1.1.0 unrelesed)
-#2. KoleckOLP,                         38.99 (mouse, version 1.1.1.0 unrelesed)
-</pre>
-
-You can submit your runs as issues, please include screenshot (of the whole window) and message with method you used(mouse, autoclicker, etc. ).
+![0.00s](leaderboard/KoleckOLP_0.00.png)
