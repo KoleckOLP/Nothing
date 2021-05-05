@@ -112,9 +112,20 @@ namespace Nothing
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            clicks++; // counts clicks
-            label2.Text = clicks.ToString() + "x"; // updates couter label
-            timeclicks(); // calls the side time logic
+            int i = 0;
+            while (i < 300)
+            {
+                clicks++; // counts clicks
+                if (clicks == 1 || clicks == 10 || clicks == 100 || clicks == 200 || clicks == 300)
+                {
+                    timeclicks(); // calls the side time logic
+                }
+                if (clicks == 300)
+                {
+                    label2.Text = clicks.ToString() + "x"; // updates couter label
+                }
+                i++;
+            }
         }
 
         private void clear() // restart
@@ -133,6 +144,11 @@ namespace Nothing
         private void button2_Click(object sender, EventArgs e)
         {
             clear();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
