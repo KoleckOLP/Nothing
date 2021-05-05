@@ -10,6 +10,6 @@ than there is a commit [96fe087](https://github.com/KoleckOLP/Nothing/commit/96f
 
 All these commits are old and I am uploading this to tempt me to look at the code and make an actually working implementation.
 
-<h2>Who the fick cares about leaderboard if I can hack my time >:)</h2>
+<h2>Who the frick cares about leaderboard if I can hack my time >:) Mehuhehuhehe~</h2>
 
 ![0.00s](leaderboard/KoleckOLP_0.00.png)
